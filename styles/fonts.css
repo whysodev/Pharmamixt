@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Proto Mono';
+    src: url('../fonts/ProtoMonoRegular.woff2') format('woff2'),
+        url('../fonts/ProtoMonoRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Proto Mono Semi';
+    src: url('../fonts/ProtoMonoSemiBold.woff2') format('woff2'),
+        url('../fonts/ProtoMonoSemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,71 @@
+@import 'fonts.css';
+@import 'reset.css';
+@import 'vars.css';
+
+html, body{
+    height: 100%;
+}
+
+body{
+    font-family: 'Proto Mono', sans-serif;
+    color: white;
+}
+
+.wrapper{
+    background: radial-gradient(50% 50% at 45.46% 50%, #09310F 0%, #161616 100%), linear-gradient(0deg, #EBFFEE, #EBFFEE);
+    min-height: 100%;
+}
+
+/* Header */
+.header{
+
+}
+.header__container{
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__button{
+    padding: 30px 40px;
+    background: var(--color-green);
+}
+.header__button-content{
+    display: flex;
+    align-items: center;
+}
+.header__button-text{
+    font-size: 40px;
+    line-height: 60px;
+    margin-right: 12px;
+}
+.header__button-icon{
+}
+.header__nav{
+    display: flex;
+    align-items: center;
+}
+.header__nav-list{
+    display: flex;
+    align-items: center;
+}
+.header__nav-time{
+    margin-right: 132px;
+    font-size: 32px;
+    line-height: 48px;
+}
+.header__nav-item{
+    margin-right: 80px;
+}
+.header__nav-item:last-child{
+    margin-right: 40px;
+}
+.header__nav-icon{
+
+}
+.header__nav-language{
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -2%;
+}
+/*=======================================================*/
