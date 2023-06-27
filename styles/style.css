@@ -8,7 +8,7 @@ html, body{
 
 body{
     font-family: 'Proto Mono', sans-serif;
-    color: white;
+    color: var(--color-white);
 }
 
 .wrapper{
@@ -50,12 +50,15 @@ body{
     align-items: center;
 }
 .header__nav-time{
-    margin-right: 132px;
+    margin-right: 225px;
     font-size: 32px;
     line-height: 48px;
 }
 .header__nav-item{
     margin-right: 80px;
+}
+.header__nav-item:first-child{
+    display: none;
 }
 .header__nav-item:last-child{
     margin-right: 40px;
@@ -67,5 +70,66 @@ body{
     font-size: 32px;
     line-height: 48px;
     letter-spacing: -2%;
+}
+/*=======================================================*/
+/* Speedometr */
+.speedometr{
+    font-family: 'Proto Mono Semi', sans-serif;
+    margin-top: 59px;
+}
+.speedometr__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.speedometr__characteristics{
+    margin-right: 95.36px;
+}
+.speedometr__characteristics-item{
+
+}
+.speedometr__characteristics-item:first-child{
+    margin-bottom: 80px;
+}
+.speedometr__characteristics-name{
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -2%;
+    color: var(--color-gray);
+    margin-bottom: 8px;
+}
+.speedometr__characteristics-number{
+    font-size: 62.35px;
+    line-height: 62.35px;
+    letter-spacing: -2%;
+}
+.speedometr__characteristics-measure{
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -2%;
+    color: var(--color-gray);
+    margin-top: 5px;
+}
+.speedometr__speedometr{
+
+}
+.speedometr__indicators{
+    margin-left: 68.87px;
+}
+.speedometr__indicators-item{
+    margin-bottom: 80px;
+}
+.speedometr__indicators-item:last-child{
+    margin-bottom: 0;
+}
+.speedometr__indicators-number{
+    font-size: 62.35px;
+    line-height: 62.35px;
+    margin-bottom: 8px;
+}
+.speedometr__indicators-name{
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--color-gray);
 }
 /*=======================================================*/
