@@ -2,134 +2,399 @@
 @import 'reset.css';
 @import 'vars.css';
 
-html, body{
+html,
+body {
     height: 100%;
 }
 
-body{
+body {
     font-family: 'Proto Mono', sans-serif;
     color: var(--color-white);
 }
 
-.wrapper{
+.wrapper {
+    background: radial-gradient(50% 50% at 45.46% 50%, #09310F 0%, #161616 100%), -webkit-gradient(linear, left bottom, left top, from(#EBFFEE), to(#EBFFEE));
+    background: -o-radial-gradient(45.46% 50%, 50% 50%, #09310F 0%, #161616 100%), -o-linear-gradient(bottom, #EBFFEE, #EBFFEE);
     background: radial-gradient(50% 50% at 45.46% 50%, #09310F 0%, #161616 100%), linear-gradient(0deg, #EBFFEE, #EBFFEE);
     min-height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
 /* Header */
-.header{
+.header {}
 
-}
-.header__container{
+.header__container {
     height: 120px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
-.header__button{
+
+.header__button {
     padding: 30px 40px;
-    background: var(--color-green);
+    background: var(--color-light-green);
 }
-.header__button-content{
+
+.header__button-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
-.header__button-text{
+
+.header__button-text {
     font-size: 40px;
     line-height: 60px;
     margin-right: 12px;
 }
-.header__button-icon{
-}
-.header__nav{
+
+.header__button-icon {}
+
+.header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
-.header__nav-list{
+
+.header__nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
-.header__nav-time{
+
+.header__nav-time {
     margin-right: 225px;
     font-size: 32px;
     line-height: 48px;
 }
-.header__nav-item{
+
+.header__nav-item {
     margin-right: 80px;
 }
-.header__nav-item:first-child{
+
+.header__nav-item:first-child {
     display: none;
 }
-.header__nav-item:last-child{
+
+.header__nav-item:last-child {
     margin-right: 40px;
 }
-.header__nav-icon{
 
-}
-.header__nav-language{
+.header__nav-icon {}
+
+.header__nav-language {
     font-size: 32px;
     line-height: 48px;
     letter-spacing: -2%;
 }
+
 /*=======================================================*/
 /* Speedometr */
-.speedometr{
+.speedometer {
     font-family: 'Proto Mono Semi', sans-serif;
     margin-top: 59px;
 }
-.speedometr__container{
+
+.speedometer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
-.speedometr__characteristics{
+
+.speedometer__characteristics {
     margin-right: 95.36px;
 }
-.speedometr__characteristics-item{
 
-}
-.speedometr__characteristics-item:first-child{
+.speedometer__characteristics-item {}
+
+.speedometer__characteristics-item:first-child {
     margin-bottom: 80px;
 }
-.speedometr__characteristics-name{
+
+.speedometer__characteristics-name {
     font-size: 24px;
     line-height: 36px;
     letter-spacing: -2%;
     color: var(--color-gray);
     margin-bottom: 8px;
 }
-.speedometr__characteristics-number{
+
+.speedometer__characteristics-number {
     font-size: 62.35px;
     line-height: 62.35px;
     letter-spacing: -2%;
 }
-.speedometr__characteristics-measure{
+
+.speedometer__characteristics-measure {
     font-size: 24px;
     line-height: 36px;
     letter-spacing: -2%;
     color: var(--color-gray);
     margin-top: 5px;
 }
-.speedometr__speedometr{
 
+.speedometer__speedometer {}
+
+.speedometer__speedometer-container {
+    width: 777.27px;
+    height: 787px;
+    position: relative;
 }
-.speedometr__indicators{
+
+.speedometer__speedometer-info {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.speedometer__speedometer-time {
+    font-size: 25.95px;
+    line-height: 38.92px;
+    letter-spacing: -2%;
+}
+
+.speedometer__speedometer-percent {
+    font-size: 140.54px;
+    letter-spacing: -2%;
+}
+
+.speedometer__speedometer-chemical {
+    font-size: 67.4px;
+    letter-spacing: -2%;
+    line-height: 67.4px;
+}
+
+.speedometer__speedometer-play {
+    width: 212px;
+    height: 212px;
+    background: var(--color-white);
+    position: absolute;
+    border-radius: 50%;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.speedometer__speedometer-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--color-green);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.speedometer__speedometer-progress {
+    position: absolute;
+    left: 18px;
+    top: 15px;
+}
+
+.speedometer__speedometer-progress circle{
+    fill: none;
+    stroke: url(#gradient1);
+    stroke-width: 30px;
+    stroke-dasharray: 2200;
+    stroke-dashoffset: 600; /* 600 - 100% на спидометре. 2200 означает  0%*/
+    transform: rotate(140deg);
+    transform-origin: center;
+}
+
+.speedometer__speedometer-scale {
+    color: var(--color-light-green-2);
+    font-size: 21.62px;
+    line-height: 21.62px;
+    position: absolute;
+}
+
+.speedometer__speedometer-scale-1 {
+    bottom: 195px;
+    left: 130px;
+}
+
+.speedometer__speedometer-scale-2{
+    bottom: 400px;
+    left: 70px;
+}
+
+.speedometer__speedometer-scale-2::before{
+    content: '';
+    position: absolute;
+    left: -70px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 60.54px;
+    height: 8.65px;
+    background: var(--color-dark-green);
+}
+
+.speedometer__speedometer-scale-3{
+    bottom: 600px;
+    left: 150px;
+}
+
+.speedometer__speedometer-scale-3::before{
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: -20px;
+    transform: translate(0, -50%) rotate(45.3deg);
+    width: 55.54px;
+    height: 8.65px;
+    background: var(--color-dark-green);
+}
+
+.speedometer__speedometer-scale-4{
+    top: 65px;
+    left: 370px;
+}
+
+.speedometer__speedometer-scale-4::before{
+    content: '';
+    position: absolute;
+    left: -40%;
+    top: -40px;
+    transform: rotate(90deg);
+    width: 52px;
+    height: 8.65px;
+    background: var(--color-dark-green);
+}
+
+.speedometer__speedometer-scale-5{
+    top: 160px;
+    right: 165px;
+}
+
+.speedometer__speedometer-scale-5::before{
+    content: '';
+    position: absolute;
+    right: -53px;
+    top: -24px;
+    transform: translate(0, -50%) rotate(-45.3deg);
+    width: 55.54px;
+    height: 8.65px;
+    background: var(--color-dark-green);
+}
+
+.speedometer__speedometer-scale-6{
+    bottom: 400px;
+    right: 70px;
+}
+
+.speedometer__speedometer-scale-6::before{
+    content: '';
+    position: absolute;
+    right: -65px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 60px;
+    height: 8.65px;
+    background: var(--color-dark-green);
+}
+
+.speedometer__indicators {
     margin-left: 68.87px;
 }
-.speedometr__indicators-item{
+
+.speedometer__indicators-item {
     margin-bottom: 80px;
 }
-.speedometr__indicators-item:last-child{
+
+.speedometer__indicators-item:last-child {
     margin-bottom: 0;
 }
-.speedometr__indicators-number{
+
+.speedometer__indicators-number {
     font-size: 62.35px;
     line-height: 62.35px;
     margin-bottom: 8px;
 }
-.speedometr__indicators-name{
+
+.speedometer__indicators-name {
     font-size: 24px;
     line-height: 36px;
     color: var(--color-gray);
 }
+
 /*=======================================================*/
+/* Footer */
+.footer {
+    margin-top: -66px;
+}
+
+.footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.footer__button {
+    color: var(--color-light-green);
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: -2%;
+    padding: 30px 123px;
+}
+
+.footer__button--green {
+    color: var(--color-white);
+    background: var(--color-light-green);
+    -webkit-clip-path: polygon(18% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 0% 100%);
+}

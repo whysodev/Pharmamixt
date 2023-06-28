@@ -1,5 +1,8 @@
 :root{
-    --color-green: #2D953C;
+    --color-light-green: #2D953C;
     --color-gray: #606C70;
     --color-white: #E1E1E1;
+    --color-green: #1C3620;
+    --color-light-green-2: #329F42;
+    --color-dark-green: #1A241B;
 }
