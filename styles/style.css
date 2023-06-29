@@ -1,120 +1,8 @@
 @import 'fonts.css';
 @import 'reset.css';
 @import 'vars.css';
-
-html,
-body {
-    height: 100%;
-}
-
-body {
-    font-family: 'Proto Mono', sans-serif;
-    color: var(--color-white);
-}
-
-.wrapper {
-    background: radial-gradient(50% 50% at 45.46% 50%, #09310F 0%, #161616 100%), -webkit-gradient(linear, left bottom, left top, from(#EBFFEE), to(#EBFFEE));
-    background: -o-radial-gradient(45.46% 50%, 50% 50%, #09310F 0%, #161616 100%), -o-linear-gradient(bottom, #EBFFEE, #EBFFEE);
-    background: radial-gradient(50% 50% at 45.46% 50%, #09310F 0%, #161616 100%), linear-gradient(0deg, #EBFFEE, #EBFFEE);
-    min-height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
-
-.main {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-}
-
-/* Header */
-.header {}
-
-.header__container {
-    height: 120px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-
-.header__button {
-    padding: 30px 40px;
-    background: var(--color-light-green);
-}
-
-.header__button-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.header__button-text {
-    font-size: 40px;
-    line-height: 60px;
-    margin-right: 12px;
-}
-
-.header__button-icon {}
-
-.header__nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.header__nav-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.header__nav-time {
-    margin-right: 225px;
-    font-size: 32px;
-    line-height: 48px;
-}
-
-.header__nav-item {
-    margin-right: 80px;
-}
-
-.header__nav-item:first-child {
-    display: none;
-}
-
-.header__nav-item:last-child {
-    margin-right: 40px;
-}
-
-.header__nav-icon {}
-
-.header__nav-language {
-    font-size: 32px;
-    line-height: 48px;
-    letter-spacing: -2%;
-}
-
-/*=======================================================*/
+@import 'global.css';
+@import 'header.css';
 /* Speedometr */
 .speedometer {
     font-family: 'Proto Mono Semi', sans-serif;
@@ -245,9 +133,9 @@ body {
     stroke: url(#gradient1);
     stroke-width: 30px;
     stroke-dasharray: 2200;
-    stroke-dashoffset: 600; /* 600 - 100% на спидометре. 2200 означает  0%*/
-    transform: rotate(140deg);
+    stroke-dashoffset: 865;
     transform-origin: center;
+    transform: rotate(-220deg);
 }
 
 .speedometer__speedometer-scale {
@@ -337,7 +225,7 @@ body {
     right: -65px;
     top: 50%;
     transform: translate(0, -50%);
-    width: 60px;
+    width: 58px;
     height: 8.65px;
     background: var(--color-dark-green);
 }

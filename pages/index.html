@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pharmamixt</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 
 <body>
@@ -15,18 +15,18 @@
                 <button class="header__button">
                     <div class="header__button-content">
                         <span class="header__button-text">STANDBY</span>
-                        <span class="header__button-icon"><img src="images/icons/stop-icon.png" alt=""></span>
+                        <span class="header__button-icon"><img src="../images/icons/stop-icon.png" alt=""></span>
                     </div>
                 </button>
                 <nav class="header__nav">
                     <div class="header__nav-time"></div>
                     <ul class="header__nav-list">
                         <li class="header__nav-item"><span class="header__nav-icon"><img
-                                    src="images/icons/search-icon.png" alt=""></span></li>
+                                    src="../images/icons/search-icon.png" alt=""></span></li>
                         <li class="header__nav-item"><span class="header__nav-icon"><img
-                                    src="images/icons/settings-icon.png" alt=""></span></li>
-                        <li class="header__nav-item"><span class="header__nav-icon"><img
-                                    src="images/icons/info-icon.png" alt=""></span></li>
+                                    src="../images/icons/settings-icon.png" alt=""></span></li>
+                        <li class="header__nav-item"><a href="../pages/info.html" class="header__nav-icon"><img
+                                    src="../images/icons/info-icon.png" alt=""></a></li>
                         <li class="header__nav-item"><span class="header__nav-language">RU</span></li>
                     </ul>
                 </nav>
@@ -122,7 +122,7 @@
                                         <stop offset="100%" stop-color="#3CB14C" />
                                     </linearGradient>
                                 </defs>
-                                <circle r="350" cx="380" cy="380" stroke-linecap="round"></circle>
+                                <circle r="350" cx="380" cy="380" class="speedometer__speedometer-circle"></circle>
                             </svg>
                             <div class="speedometer__speedometer-info">
                                 <p class="speedometer__speedometer-time">1:16 MIN</p>
@@ -166,8 +166,8 @@
         </footer>
     </div>
 
-    <script src="node_modules/moment/moment.js"></script>
-    <script src="js/script.js"></script>
+    <script src="../node_modules/moment/moment.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

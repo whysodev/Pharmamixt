@@ -1,0 +1,52 @@
+@import 'fonts.css';
+@import 'reset.css';
+@import 'vars.css';
+@import 'global.css';
+@import 'header.css';
+
+/* Settings */
+.settings{
+    margin-top: 52px;
+}
+.settings__container{
+    padding: 0 85px;
+}
+.settings__title-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+}
+.settings__title-button{
+    margin-left: 80px;
+}
+.settings__title-title{
+    font-family: 'Proto Mono Semi';
+    font-size: 80px;
+    line-height: 120px;
+    letter-spacing: -2%;
+    margin-left: 247px;
+}
+.settings__settings{}
+.settings__setting{
+    display: flex;
+    justify-content: space-between;
+    padding: 16.5px 0;
+    margin-bottom: 8px;
+}
+.settings__setting{
+    margin-bottom: 0;
+}
+.settings__setting-text{
+    font-family: 'Proto Mono';
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -2%;
+}
+.settings__setting-icon{}
+.settings__setting-regime{
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: -2%;
+    color: #58BB3A;
+    font-family: 'Source Code Pro', monospace;
+}
