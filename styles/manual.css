@@ -1,0 +1,106 @@
+@import 'fonts.css';
+@import 'reset.css';
+@import 'vars.css';
+@import 'global.css';
+@import 'header.css';
+
+/* Manual */
+.manual{
+    margin-top: 52px;
+    padding: 0 85px 0 120px;
+}
+.manual__container{}
+.manual__title-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 87px;
+}
+.manual__title-title{
+    font-family: 'Proto Mono Semi';
+    font-size: 80px;
+    line-height: 120px;
+    letter-spacing: -2%;
+    margin-left: 370px;
+}   
+.manual__manual{
+    display: flex;
+    align-items: center;
+}
+.manual__manual-modes{}
+.manual__manual-title{
+    font-family: 'Proto Mono Semi';
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: -2%;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.manual__manual-button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 202px;
+}
+.manual__manual-button{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--color-white);
+    position: relative;
+}
+.manual__manual-button img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.manual__manual-button-text{
+    font-size: 'Proto Mono Semi';
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: -2%;
+    margin-top: 32px;
+}
+.manual__manual-numbers{
+    display: flex;
+    margin-bottom: 100px;
+}
+.manual__manual-number{
+    margin-right: 64px;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -2%;
+    margin-top: 17px;
+    position: relative;
+    z-index: 5;
+}
+.manual__manual-number.active::after{
+    content: url('../images/number-bg.png');
+    position: absolute;
+    left: -8.5px;
+    top: -3px;
+    z-index: -1;
+}
+.manual__manual-number.active{
+    color: var(--color-dark-green);
+}
+.manual__manual-number::before{
+    content: '';
+    width: 4px;
+    height: 12px;
+    background: #4D6B52;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: -10px;
+    z-index: -1;
+}
+.manual__manual-number:last-child{
+    margin-right: 0;
+}
+.manual__manual-line{
+    box-shadow: 0px 4px 4px 0px #122014 inset;
+    width: 490px;
+    height: 8px;
+    background: #506F55;
+}
