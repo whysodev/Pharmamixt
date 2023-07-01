@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="../styles/settings.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <button class="header__button">
+                    <div class="header__button-content">
+                        <span class="header__button-text">STANDBY</span>
+                        <span class="header__button-icon"><img src="../images/icons/stop-icon.png" alt=""></span>
+                    </div>
+                </button>
+                <nav class="header__nav">
+                    <div class="header__nav-time"></div>
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item"><span class="header__nav-icon"><img
+                                    src="../images/icons/search-icon.png" alt=""></span></li>
+                        <li class="header__nav-item"><a href="./settings.html" class="header__nav-icon"><img
+                                    src="../images/icons/settings-icon.png" alt=""></a></li>
+                        <li class="header__nav-item"><a href="../pages/info.html" class="header__nav-icon"><img
+                                    src="../images/icons/info-icon.png" alt=""></a></li>
+                        <li class="header__nav-item"><span class="header__nav-language">RU</span></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <section class="settings">
+                <div class="settings__container">
+                    <div class="settings__title-container">
+                        <a href="../pages/index.html" class="settings__title-button">
+                            <img src="../images/icons/return-icon.png" alt="">
+                        </a>
+                        <p class="settings__title-title">Setting by day</p>
+                    </div>
+                    <div class="settings__settings-wrapper">
+                        <div class="settings__settings-days">
+                            <p class="settings__settings-day" id="Monday">Monday</p>
+                            <p class="settings__settings-day" id="Tuesday">Tuesday</p>
+                            <p class="settings__settings-day" id="Wednesday">Wednesday</p>
+                            <p class="settings__settings-day" id="Thursday">Thursday</p>
+                            <p class="settings__settings-day" id="Friday">Friday</p>
+                            <p class="settings__settings-day" id="Saturday">Saturday</p>
+                            <p class="settings__settings-day" id="Sunday">Sunday</p>
+                        </div>
+                        <div class="settings__settings">
+                            <div class="settings__setting">
+                                <p class="settings__setting-title">Startup</p>
+                                <div class="settings__setting-timer">
+                                    <div class="settings__setting-time">
+                                        <span class="settings__setting-up" id="startup-hours_up-arrow"
+                                            onclick="checkHoursUpArrow('#startup_hours')"><img
+                                                src="../images/icons/arrow-up-icon.png" alt=""></span>
+                                        <p class="settings__setting-table" id="startup_hours">00</p>
+                                        <span class="settings__setting-down" id="startup-hours_down-arrow"
+                                            onclick="checkHoursDownArrow('#startup_hours')"><img
+                                                src="../images/icons/arrow-down-icon.png" alt=""></span>
+                                    </div>
+                                    <p class="settings__setting-devider">:</p>
+                                    <div class="settings__setting-time">
+                                        <span class="settings__setting-up" id="startup-minutes_up-arrow"
+                                            onclick="checkMinutesUpArrow('#startup_minutes')"><img
+                                                src="../images/icons/arrow-up-icon.png" alt=""></span>
+                                        <p class="settings__setting-table" id="startup_minutes">00</p>
+                                        <span class="settings__setting-down" id="startup-minutes_down-arrow"
+                                            onclick="checkMinutesDownArrow('#startup_minutes')"><img
+                                                src="../images/icons/arrow-down-icon.png" alt=""></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settings__setting">
+                                <p class="settings__setting-title">Stop</p>
+                                <div class="settings__setting-timer">
+                                    <div class="settings__setting-time">
+                                        <span class="settings__setting-up" id="stop-hours_up-arrow"
+                                            onclick="checkHoursUpArrow('#stop_hours')"><img
+                                                src="../images/icons/arrow-up-icon.png" alt=""></span>
+                                        <p class="settings__setting-table" id="stop_hours">00</p>
+                                        <span class="settings__setting-down" id="stop-hours_down-arrow"
+                                            onclick="checkHoursDownArrow('#stop_hours')"><img
+                                                src="../images/icons/arrow-down-icon.png" alt=""></span>
+                                    </div>
+                                    <p class="settings__setting-devider">:</p>
+                                    <div class="settings__setting-time">
+                                        <span class="settings__setting-up" id="stop-minutes_up-arrow"
+                                            onclick="checkMinutesUpArrow('#stop_minutes')"><img
+                                                src="../images/icons/arrow-up-icon.png" alt=""></span>
+                                        <p class="settings__setting-table" id="stop_minutes">00</p>
+                                        <span class="settings__setting-down" id="stop-minutes_down-arrow"
+                                            onclick="checkMinutesDownArrow('#stop_minutes')"><img src="
+                                            ../images/icons/arrow-down-icon.png" alt=""></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settings__setting">
+                                <p class="settings__setting-title">Decontamination</p>
+                                <div class="settings__setting-timer">
+                                    <div class="settings__setting-time">
+                                        <span class="settings__setting-up" id="decon-hours_up-arrow" onclick="checkHoursUpArrow('#decon_hours')"><img
+                                                src="../images/icons/arrow-up-icon.png" alt=""></span>
+                                        <p class="settings__setting-table" id="decon_hours">00</p>
+                                        <span class="settings__setting-down" id="decon-hours_down-arrow" onclick="checkHoursDownArrow('#decon_hours')"><img
+                                                src="../images/icons/arrow-down-icon.png" alt=""></span>
+                                    </div>
+                                    <p class="settings__setting-devider">:</p>
+                                    <div class="settings__setting-time">
+                                        <span class="settings__setting-up" id="decon-minutes_up-arrow" onclick="checkMinutesUpArrow('#decon_minutes')"><img
+                                                src="../images/icons/arrow-up-icon.png" alt=""></span>
+                                        <p class="settings__setting-table" id="decon_minutes">00</p>
+                                        <span class="settings__setting-down" id="decon-minutes_down-arrow" onclick="checkMinutesDownArrow('#decon_minutes')"><img
+                                                src="../images/icons/arrow-down-icon.png" alt=""></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__buttons">
+                    <button class="footer__button" id="cancel">Cancel</button>
+                    <button class="footer__button footer__button--green" id="done">Done</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="calculator-wrapper">
+        <div class="calculator">
+            <div class="calculator__table">
+                <input type="number" placeholder="00" class="calculator__table-time" id="calculator_time-hours"
+                    oninput="checkInputLength(this)">
+                <div class="calculator__table-devider">:</div>
+                <input type="number" placeholder="00" class="calculator__table-time" id="calculator_time-minutes"
+                    oninput="checkInputLength(this)">
+            </div>
+            <div class="calculator__keyboard">
+                <p class="calculator__keyboard-key" onclick="addNumber(1)">1</p>
+                <p class="calculator__keyboard-key" onclick="addNumber(2)">2</p>
+                <p class="calculator__keyboard-key" onclick="addNumber(3)">3</p>
+                <p class="calculator__keyboard-key" onclick="addNumber(4)">4</p>
+                <p class="calculator__keyboard-key" onclick="addNumber(5)">5</p>
+                <p class="calculator__keyboard-key" onclick="addNumber(6)">6</p>
+                <p class="calculator__keyboard-key" onclick="addNumber(7)">7</p>
+                <p class="calculator__keyboard-key" onclick="addNumber(8)">8</p>
+                <p class="calculator__keyboard-key" onclick="addNumber(9)">9</p>
+                <p class="calculator__keyboard-key-invisible">0</p>
+                <p class="calculator__keyboard-key" onclick="addNumber(0)">0</p>
+                <p class="calculator__keyboard-key" onclick="backspace()" id="backbutton"><img
+                        src="../images/icons/left-arrow-icon.png" alt=""></p>
+            </div>
+            <button class="calculator__button" id="calc_done">DONE</button>
+            <div class="calculator__cross">
+                <div class="calculator__cross-line"></div>
+                <div class="calculator__cross-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../node_modules/moment/moment.js"></script>
+    <script src="../js/timer.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

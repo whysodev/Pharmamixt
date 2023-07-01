@@ -128,12 +128,12 @@
     top: 15px;
 }
 
-.speedometer__speedometer-progress circle{
+.speedometer__speedometer-circle {
     fill: none;
     stroke: url(#gradient1);
     stroke-width: 30px;
     stroke-dasharray: 2200;
-    stroke-dashoffset: 865;
+    stroke-dashoffset: 600;
     transform-origin: center;
     transform: rotate(-220deg);
 }
@@ -151,7 +151,7 @@
 }
 
 .speedometer__speedometer-scale-2{
-    bottom: 400px;
+    bottom: 412px;
     left: 70px;
 }
 
