@@ -54,7 +54,7 @@ days.forEach(day => {
         });
         day.classList.add('active')
         localStorage.setItem('active-day', day.id);
-        active = day.id
+        active = day.id;
         changeTimer(active)
     })
 })
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const monday = document.getElementById('Monday');
         monday.classList.add('active');
         active = 'Monday';
-        setDefaultTime();
+        changeTimer(active)
     }
 })
 
@@ -201,7 +201,7 @@ function initTables(table_hours, table_minutes) {
     }else{
         if (hoursInput.value < 24 && minutesInput.value < 60) {
             table_hours.innerHTML = hoursInput.value;
-            table_minutes.innerHTML = hoursInput.value;
+            table_minutes.innerHTML = minutesInput.value;
             calculator_wrapper.classList.remove('active');
         } else {
             alert('Введите правильный формат времени');
