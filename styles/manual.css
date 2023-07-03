@@ -50,7 +50,7 @@
 }
 .manual__manual-button img{
     position: absolute;
-    left: 50%;
+    left: 107px;
     top: 50%;
     transform: translate(-50%, -50%);
 }

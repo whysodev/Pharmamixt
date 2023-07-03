@@ -202,6 +202,8 @@ function initTables(table_hours, table_minutes) {
         if (hoursInput.value < 24 && minutesInput.value < 60) {
             table_hours.innerHTML = hoursInput.value;
             table_minutes.innerHTML = minutesInput.value;
+            hoursInput.value = '';
+            minutesInput.value = '';
             calculator_wrapper.classList.remove('active');
         } else {
             alert('Введите правильный формат времени');
@@ -213,20 +215,24 @@ tables.forEach(table => {
     table.addEventListener('click', () => {
         calculator_wrapper.classList.add('active');
         if (table.id.startsWith('sta')) {
-            initPlaceholder(startup_hours, startup_minutes)
-            calc_done.addEventListener('click', () => {
-                initTables(startup_hours, startup_minutes)
-            })
+            initPlaceholder(startup_hours, startup_minutes);
+            calc_done.id = 'startup'
         } else if (table.id.startsWith('sto')) {
-            initPlaceholder(stop_hours, stop_minutes)
-            calc_done.addEventListener('click', () => {
-                initTables(stop_hours, stop_minutes)
-            })
+            initPlaceholder(stop_hours, stop_minutes);
+            calc_done.id = 'stop'
         } else {
-            initPlaceholder(stop_hours, stop_minutes)
-            calc_done.addEventListener('click', () => {
-                initTables(decon_hours, decon_minutes)
-            })
+            initPlaceholder(decon_hours, decon_minutes);
+            calc_done.id = 'decon'
         }
     })
 })
+
+calc_done.addEventListener('click', () => {
+    if (calc_done.id == 'startup'){
+        initTables(startup_hours, startup_minutes)
+    }else if (calc_done.id == 'stop'){
+        initTables(stop_hours, stop_minutes)
+    }else if (calc_done.id = 'decon'){
+        initTables(decon_hours, decon_minutes)
+    }
+});
