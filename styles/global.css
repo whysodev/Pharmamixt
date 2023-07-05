@@ -6,13 +6,14 @@ body {
 body {
     font-family: 'Proto Mono', sans-serif;
     color: var(--color-white);
+    display: flex;
+    justify-content: center;
 }
 
 .wrapper {
     background: radial-gradient(50% 50% at 45.46% 50%, #09310F 0%, #161616 100%), -webkit-gradient(linear, left bottom, left top, from(#EBFFEE), to(#EBFFEE));
     background: -o-radial-gradient(45.46% 50%, 50% 50%, #09310F 0%, #161616 100%), -o-linear-gradient(bottom, #EBFFEE, #EBFFEE);
     background: radial-gradient(50% 50% at 45.46% 50%, #09310F 0%, #161616 100%), linear-gradient(0deg, #EBFFEE, #EBFFEE);
-    min-height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -21,6 +22,8 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
     overflow: hidden;
+    width: 1366px;
+    height: 1024px;
 }
 
 .main {
