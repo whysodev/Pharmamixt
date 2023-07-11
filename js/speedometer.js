@@ -1,5 +1,7 @@
 const circle = document.querySelector('.speedometer__speedometer-circle');
-const percent = 50;
+
+
+const percent = 0;
 const percent_indicator = document.querySelector('.speedometer__speedometer-percent');
 
 let modified_percent;

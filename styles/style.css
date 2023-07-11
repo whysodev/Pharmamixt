@@ -113,7 +113,7 @@
 
 .speedometer__speedometer-progress {
     position: absolute;
-    left: 18px;
+    left: 24px;
     top: 15px;
     transform: rotate(-220deg);
     width: 749px;
@@ -128,6 +128,36 @@
     stroke-dashoffset: 600;
     transform-origin: center;
     position: relative;
+}
+
+.speedometer__speedometer-cursor-wrapper{
+    position: absolute;
+    left: 50%;
+    top: 388px;
+    transform: translate(-50%, -50%);
+    width: 735px;
+    height: 735px;
+    border-radius: 50%;
+}
+
+.speedometer__speedometer-cursor{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 7px;
+    height: 365px;
+    z-index: 10;
+    transform: rotate(50deg);
+    transform-origin: top;
+}
+
+.speedometer__speedometer-line{
+    width: 5px;
+    height: 50%;
+}
+
+.speedometer__speedometer-line--white{
+    background: linear-gradient(360deg, #FFFFFF 23.15%, rgba(255, 255, 255, 0) 67.85%);
 }
 
 .speedometer__speedometer-scale {
