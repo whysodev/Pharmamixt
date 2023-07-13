@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import 'fonts.css';
 @import 'reset.css';
 @import 'vars.css';
@@ -9,6 +16,10 @@
 }
 
 .staying .wrapper {
+    background: radial-gradient(50% 50% at 45.46% 50%, #000000 0%, #161616 100%),
+        -webkit-gradient(linear, left bottom, left top, from(#EBFFEE), to(#EBFFEE));
+    background: -o-radial-gradient(45.46% 50%, 50% 50%, #000000 0%, #161616 100%),
+        -o-linear-gradient(bottom, #EBFFEE, #EBFFEE);
     background: radial-gradient(50% 50% at 45.46% 50%, #000000 0%, #161616 100%),
         linear-gradient(0deg, #EBFFEE, #EBFFEE);
 }
@@ -30,8 +41,8 @@
 }
 
 .running .wrapper {
-    background: radial-gradient(50% 50% at 45.46% 50%, #09310F 0%, #161616 100%), -webkit-gradient(linear, left bottom, left top, from(#EBFFEE), to(#EBFFEE));
     background: -o-radial-gradient(45.46% 50%, 50% 50%, #09310F 0%, #161616 100%), -o-linear-gradient(bottom, #EBFFEE, #EBFFEE);
+    background: radial-gradient(50% 50% at 45.46% 50%, #09310F 0%, #161616 100%), -webkit-gradient(linear, left bottom, left top, from(#EBFFEE), to(#EBFFEE));
     background: radial-gradient(50% 50% at 45.46% 50%, #09310F 0%, #161616 100%), linear-gradient(0deg, #EBFFEE, #EBFFEE);
 }
 
@@ -55,9 +66,16 @@
 
 .speedometer__thermometer {
     margin-right: 152px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 }
 
 .speedometer__thermometer-range {
@@ -68,12 +86,17 @@
 }
 
 .speedometer__thermometer-runner {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(14.97%, #3CB14C), to(#DF9300));
+    background: -o-linear-gradient(bottom, #3CB14C 14.97%, #DF9300 100%);
     background: linear-gradient(0deg, #3CB14C 14.97%, #DF9300 100%);
-    height: 209px;
+    height: 0px;
     width: 30px;
     position: absolute;
     left: 0;
     bottom: 0;
+    -webkit-transition: height 1s ease;
+    -o-transition: height 1s ease;
+    transition: height 1s ease;
 }
 
 .speedometer__thermometer-number {
@@ -90,7 +113,9 @@
     content: '';
     position: absolute;
     top: 50%;
-    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
     left: -53px;
     width: 46px;
     height: 8px;
@@ -129,7 +154,9 @@
     position: absolute;
     right: -37px;
     top: 50%;
-    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
     width: 30px;
     height: 3px;
     background: var(--color-dark-green);
@@ -145,7 +172,9 @@
     position: absolute;
     right: -37px;
     top: 50%;
-    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
     width: 30px;
     height: 3px;
     background: var(--color-dark-green);
@@ -161,7 +190,9 @@
     position: absolute;
     right: -37px;
     top: 50%;
-    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
     width: 30px;
     height: 3px;
     background: var(--color-dark-green);
@@ -177,7 +208,9 @@
     position: absolute;
     right: -37px;
     top: 63px;
-    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
     width: 30px;
     height: 3px;
     background: var(--color-dark-green);
@@ -226,9 +259,16 @@
     line-height: 48px;
     letter-spacing: -2%;
     color: #FFFFFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .speedometer__speedometer-chemical span {
@@ -257,7 +297,9 @@
     position: absolute;
     left: 20.5px;
     top: 15px;
-    transform: rotate(-225deg);
+    -webkit-transform: rotate(-225deg);
+        -ms-transform: rotate(-225deg);
+            transform: rotate(-225deg);
     width: 749px;
     height: 747px;
 }
@@ -267,16 +309,23 @@
     stroke: url(#gradient1);
     stroke-width: 36px;
     stroke-dasharray: 2250;
-    stroke-dashoffset: 600;
-    transform-origin: center;
+    stroke-dashoffset: 2250;
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
     position: relative;
+    -webkit-transition: stroke-dashoffset 1s ease;
+    -o-transition: stroke-dashoffset 1s ease;
+    transition: stroke-dashoffset 1s ease;
 }
 
 .speedometer__speedometer-cursor-wrapper {
     position: absolute;
     left: 386px;
     top: 388px;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     width: 738px;
     height: 737px;
     border-radius: 50%;
@@ -289,8 +338,17 @@
     top: 50%;
     width: 7px;
     height: 368px;
-    transform: rotate(90deg);
-    transform-origin: top;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: top;
+        -ms-transform-origin: top;
+            transform-origin: top;
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    -o-transition: transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
 }
 
 .speedometer__speedometer-line {
@@ -299,6 +357,8 @@
 }
 
 .speedometer__speedometer-line--white {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(23.15%, #FFFFFF), color-stop(67.85%, rgba(255, 255, 255, 0)));
+    background: -o-linear-gradient(bottom, #FFFFFF 23.15%, rgba(255, 255, 255, 0) 67.85%);
     background: linear-gradient(360deg, #FFFFFF 23.15%, rgba(255, 255, 255, 0) 67.85%);
 }
 
@@ -328,7 +388,9 @@
     position: absolute;
     right: -70px;
     top: 50%;
-    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
     width: 60.54px;
     height: 8.65px;
     background: var(--color-dark-green);
@@ -344,7 +406,9 @@
     position: absolute;
     left: 37px;
     top: 43px;
-    transform: translate(0, -50%) rotate(45.3deg);
+    -webkit-transform: translate(0, -50%) rotate(45.3deg);
+        -ms-transform: translate(0, -50%) rotate(45.3deg);
+            transform: translate(0, -50%) rotate(45.3deg);
     width: 57.5px;
     height: 8.65px;
     background: var(--color-dark-green);
@@ -360,7 +424,9 @@
     position: absolute;
     left: -8px;
     top: 58px;
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
     width: 57.5px;
     height: 8.65px;
     background: var(--color-dark-green);
@@ -376,7 +442,9 @@
     position: absolute;
     right: 47px;
     top: 45px;
-    transform: translate(0, -50%) rotate(-45.3deg);
+    -webkit-transform: translate(0, -50%) rotate(-45.3deg);
+        -ms-transform: translate(0, -50%) rotate(-45.3deg);
+            transform: translate(0, -50%) rotate(-45.3deg);
     width: 55.54px;
     height: 8.65px;
     background: var(--color-dark-green);
@@ -392,7 +460,9 @@
     position: absolute;
     right: 61px;
     top: 50%;
-    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
     width: 58px;
     height: 8.65px;
     background: var(--color-dark-green);

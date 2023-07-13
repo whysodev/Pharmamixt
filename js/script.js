@@ -1,22 +1,3 @@
-const time = document.querySelector('.header__nav-time');
-const language = document.querySelector('.header__nav-language');
-
-function updateTime() {
-    time.innerHTML = `${moment().format("HH:mm, DD MMMM")}`;
-}
-
-updateTime();
-
-setInterval(updateTime, 1000)
-
-language.addEventListener('click', () => {
-    if (language.textContent === 'EN') {
-        language.textContent = 'DE'
-    } else {
-        language.textContent = 'EN'
-    }
-});
-
 const play_button = document.querySelector('.speedometer__speedometer-play');
 const button_icon = document.querySelector('.speedometer__speedometer-play img');
 const status_button = document.querySelector('.header__button-text');
@@ -50,67 +31,89 @@ const result = document.querySelector('.speedometer__speedometer-result');
 const figure = document.querySelector('#progress');
 const runner_number = document.querySelector('.speedometer__thermometer-number');
 
-if (play_button) {
-    let value;
+function runSpeedometer() {
+    figure.src = '../images/progress.svg';
+    button_icon.src = '../images/icons/button-stop-icon.svg';
+    status_button.textContent = 'Running';
+    status_icon.src = '../images/icons/play-icon.svg';
+    localStorage.setItem('status', true);
+    document.body.classList.remove('staying');
+    document.body.classList.add('running');
 
-    if (isRunning === true) {
-        button_icon.src = '../images/icons/button-stop-icon.svg';
-        figure.src = '../images/progress.svg';
-        document.body.classList.add('running');
-    } else {
-        button_icon.src = '../images/icons/treangle-icon.svg';
-        result.innerHTML = '00';
-        figure.src = '../images/progressoff.svg';
-        progress.style.strokeDashoffset = 2250;
-        cursor.style.transform = `rotate(45deg)`;
-        document.body.classList.add('staying');
-        result.innerHTML = 0;
-        runner_number.innerHTML = 0;
-    }
-    play_button.addEventListener('click', () => {
-        if (isRunning === false) {
-            isRunning = true;
-            button_icon.src = '../images/icons/button-stop-icon.svg';
-            status_button.textContent = 'Running';
-            status_icon.src = '../images/icons/play-icon.svg';
-            localStorage.setItem('status', true);
-            document.body.classList.remove('staying');
-            document.body.classList.add('running');
+    const mode = Number(localStorage.getItem('activeNumber')) || 1;
 
-            value = 500;
+    value = 200 * mode;
+    carbon_dioxide = 1000;
 
-            let deg = (value * 0.18) + 45;
-            let offset = 2250 - (value * 1.1);
-            let height = value * (9 / 35);
 
-            progress.style.strokeDashoffset = offset;
-            cursor.style.transform = `rotate(${deg}deg)`;
-            runner.style.height = height + 'px';
+    let deg = (value * 0.18) + 45;
+    let offset = 2250 - (value * 1.1);
+    let height = carbon_dioxide * (9 / 35);
+
+    progress.style.strokeDashoffset = offset;
+    cursor.style.transform = `rotate(${deg}deg)`;
+    runner.style.height = height + 'px';
+    runner_number.innerHTML = carbon_dioxide;
+
+    let currentValue = 0;
+    const step = 10;
+    let carbon_value = 0;
+
+    function changeValue() {
+        if (currentValue < value) {
+            currentValue += step;
+            carbon_value += step;
+            result.innerHTML = currentValue;
+            runner_number.innerHTML = carbon_value;
+            setTimeout(changeValue, 1);
+        } else {
             result.innerHTML = value;
-            runner_number.innerHTML = value;
-        } else if (isRunning === true) {
-            isRunning = false;
-            button_icon.src = '../images/icons/treangle-icon.svg';
-            status_button.textContent = 'Standby';
-            status_icon.src = '../images/icons/stop-icon.svg';
-            localStorage.setItem('status', false);
-            result.innerHTML = '00'
-            figure.src = '../images/progressoff.svg';
-            progress.style.strokeDashoffset = 2250;
-            cursor.style.transform = `rotate(45deg)`;
-            document.body.classList.remove('running');
-            document.body.classList.add('staying');
-            result.innerHTML = 0;
-            runner.style.height = 0;
-            runner_number.innerHTML = 0;
+            runner_number.innerHTML = carbon_dioxide;
         }
-    })
+    }
+
+    changeValue()
 }
+function stopSpeedometer() {
+    button_icon.src = '../images/icons/treangle-icon.svg';
+    status_button.textContent = 'Standby';
+    status_icon.src = '../images/icons/stop-icon.svg';
+    localStorage.setItem('status', false);
+    result.innerHTML = '00'
+    figure.src = '../images/progressoff.svg';
+    progress.style.strokeDashoffset = 2250;
+    cursor.style.transform = `rotate(45deg)`;
+    document.body.classList.remove('running');
+    document.body.classList.add('staying');
+    runner.style.height = 0;
+    runner_number.innerHTML = 0;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (play_button) {
+        let value;
+
+        if (isRunning) {
+            runSpeedometer()
+        } else {
+            stopSpeedometer()
+        }
+
+        play_button.addEventListener('click', () => {
+            if (isRunning === false) {
+                isRunning = true;
+                runSpeedometer()
+            } else if (isRunning === true) {
+                isRunning = false;
+                stopSpeedometer()
+            }
+        })
+    }
+})
 
 if (window.location.href !== 'http://127.0.0.1:5500/pages/index.html') {
     let idleTime = 0;
-    let idleInterval = setInterval(timerIncrement, 1000); // 1 секунда
-
+    let idleInterval = setInterval(timerIncrement, 1000);
 
     function timerIncrement() {
         idleTime += 1;
@@ -130,5 +133,5 @@ if (window.location.href !== 'http://127.0.0.1:5500/pages/index.html') {
 
     document.addEventListener('click', () => {
         idleTime = 0;
-    })
+    });
 }

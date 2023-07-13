@@ -1,9 +1,9 @@
 const numbers = document.querySelectorAll('.manual__manual-number');
 const activeNumber = localStorage.getItem('activeNumber');
-if (activeNumber){
-    const element = document.getElementById(activeNumber)
+if (activeNumber) {
+    const element = document.getElementById('number-' + activeNumber)
     element.classList.add('active')
-}else{
+} else {
     const element = document.getElementById('number-1');
     element.classList.add('active');
 }
@@ -12,7 +12,7 @@ numbers.forEach(number => {
         numbers.forEach(number => {
             number.classList.remove('active');
         })
-        localStorage.setItem('activeNumber', number.id)
-        number.classList.add('active')
+        localStorage.setItem('activeNumber', number.id[number.id.length - 1])
+        number.classList.add('active');
     })
 })
