@@ -1,5 +1,8 @@
 /* Header */
-.header {}
+.header {
+    position: relative;
+    z-index: 200;
+}
 
 .header__container {
     height: 120px;
@@ -15,7 +18,11 @@
 }
 
 .header__button {
-    padding: 30px 40px;
+    width: 300px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: var(--color-light-green);
 }
 

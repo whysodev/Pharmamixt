@@ -9,7 +9,7 @@ function checkHoursUpArrow(table_hours, table_minutes) {
     const hours = document.querySelector(table_hours);
     const minutes = document.querySelector(table_minutes);
 
-    if (Number(hours.innerHTML) === 23 && Number(minutes.innerHTML) === 59) {
+    if (Number(hours.innerHTML) === 23) {
         hours.innerHTML = '00';
         minutes.innerHTML = '00';
     } else {
@@ -26,7 +26,6 @@ function checkHoursDownArrow(table_hours, table_minutes) {
 
     if (Number(hours.innerHTML) === 0 && Number(minutes.innerHTML) === 0) {
         hours.innerHTML = '23';
-        minutes.innerHTML = '59';
     } else {
         if (Number(hours.innerHTML) !== 0 && Number(hours.innerHTML) <= 10) {
             hours.innerHTML = `0${Number(hours.innerHTML) - 1}`
