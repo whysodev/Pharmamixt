@@ -7,8 +7,9 @@
 /* Speedometr */
 .speedometer {
     font-family: 'Proto Mono Semi', sans-serif;
-    margin-top: 59px;
+    margin-top: 34px;
 }
+
 
 .speedometer__container {
     display: -webkit-box;
@@ -22,36 +23,128 @@
     justify-content: center;
 }
 
-.speedometer__characteristics {
-    margin-right: 95.36px;
+.speedometer__thermometer{
+    margin-right: 152px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
-
-.speedometer__characteristics-item {}
-
-.speedometer__characteristics-item:first-child {
-    margin-bottom: 80px;
+.speedometer__thermometer-range{
+    position: relative;
+    height: 538px;
+    width: 30px;
+    background: #2E3C2E;
 }
-
-.speedometer__characteristics-name {
-    font-size: 24px;
-    line-height: 36px;
+.speedometer__thermometer-runner{
+    background: linear-gradient(0deg, #3CB14C 14.97%, #DF9300 100%);
+    height: 209px;
+    width: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.speedometer__thermometer-number{
+    position: absolute;
+    left: 45px;
+    top: -18px;
+    font-family: 'Proto Mono Semi';
+    font-size: 32px;
+    line-height: 32px;
     letter-spacing: -2%;
-    color: var(--color-gray);
-    margin-bottom: 8px;
+}
+.speedometer__thermometer-number::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: -54px;
+    width: 46px;
+    height: 8px;
+    background: var(--color-white);
+}
+.speedometer__thermometer-scale{
+    position: absolute;
+    font-size: 16px;
+    line-height: 16px;
+    color: #606C70;
+    letter-spacing: -2%;
+    font-family: "Proto Mono Semi";
 }
 
-.speedometer__characteristics-number {
+.speedometer__thermometer-chemical{
+    font-family: "Proto Mono Semi";
     font-size: 62.35px;
-    line-height: 62.35px;
-    letter-spacing: -2%;
+    margin-bottom: 18px;
+    margin-right: -25px;
 }
 
-.speedometer__characteristics-measure {
-    font-size: 24px;
-    line-height: 36px;
-    letter-spacing: -2%;
-    color: var(--color-gray);
-    margin-top: 5px;
+.speedometer__thermometer-scale-1{
+    bottom: 0;
+    left: -18px;
+}
+
+.speedometer__thermometer-scale-2{
+    bottom: 110px;
+    left: -38px;
+}
+
+.speedometer__thermometer-scale-2::after{
+    content: '';
+    position: absolute;
+    right: -37px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 30px;
+    height: 3px;
+    background: var(--color-dark-green);
+}
+
+.speedometer__thermometer-scale-3{
+    bottom: 247px;
+    left: -48px;
+}
+
+.speedometer__thermometer-scale-3::after{
+    content: '';
+    position: absolute;
+    right: -36.5px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 30px;
+    height: 3px;
+    background: var(--color-dark-green);
+}
+
+.speedometer__thermometer-scale-4{
+    bottom: 383px;
+    left: -48px;
+}
+
+.speedometer__thermometer-scale-4::after{
+    content: '';
+    position: absolute;
+    right: -36.5px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 30px;
+    height: 3px;
+    background: var(--color-dark-green);
+}
+
+.speedometer__thermometer-scale-5{
+    left: -58px;
+    top: -9px;
+}
+
+.speedometer__thermometer-scale-5::after{
+    content: '';
+    position: absolute;
+    right: -36.5px;
+    top: 63px;
+    transform: translate(0, -50%);
+    width: 30px;
+    height: 3px;
+    background: var(--color-dark-green);
 }
 
 .speedometer__speedometer {}
@@ -93,9 +186,21 @@
 }
 
 .speedometer__speedometer-chemical {
-    font-size: 67.4px;
+    font-size: 32px;
+    line-height: 48px;
     letter-spacing: -2%;
-    line-height: 67.4px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.speedometer__speedometer-chemical span{
+    font-family: "Proto Mono Semi";
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -2%;
+    color: #8DAC91;
 }
 
 .speedometer__speedometer-play {
@@ -113,9 +218,9 @@
 
 .speedometer__speedometer-progress {
     position: absolute;
-    left: 24px;
+    left: 22px;
     top: 15px;
-    transform: rotate(-220deg);
+    transform: rotate(-225deg);
     width: 749px;
     height: 747px;
 }
@@ -123,16 +228,16 @@
 .speedometer__speedometer-circle {
     fill: none;
     stroke: url(#gradient1);
-    stroke-width: 30px;
-    stroke-dasharray: 2200;
-    stroke-dashoffset: 600;
+    stroke-width: 36px;
+    stroke-dasharray: 2250;
+    stroke-dashoffset: 2000;
     transform-origin: center;
     position: relative;
 }
 
 .speedometer__speedometer-cursor-wrapper{
     position: absolute;
-    left: 50%;
+    left: 384px;
     top: 388px;
     transform: translate(-50%, -50%);
     width: 735px;
@@ -145,9 +250,9 @@
     left: 50%;
     top: 50%;
     width: 7px;
-    height: 365px;
+    height: 367px;
     z-index: 10;
-    transform: rotate(50deg);
+    transform: rotate(45deg);
     transform-origin: top;
 }
 
@@ -168,19 +273,19 @@
 }
 
 .speedometer__speedometer-scale-1 {
-    bottom: 195px;
-    left: 130px;
+    bottom: 116px;
+    left: 60px;
 }
 
 .speedometer__speedometer-scale-2 {
     bottom: 412px;
-    left: 70px;
+    left: -50px;
 }
 
 .speedometer__speedometer-scale-2::before {
     content: '';
     position: absolute;
-    left: -70px;
+    right: -70px;
     top: 50%;
     transform: translate(0, -50%);
     width: 60.54px;
@@ -189,47 +294,47 @@
 }
 
 .speedometer__speedometer-scale-3 {
-    bottom: 619px;
-    left: 173px;
+    bottom: 667px;
+    left: 60px;
 }
 
 .speedometer__speedometer-scale-3::before {
     content: '';
     position: absolute;
-    left: -50px;
-    top: -20px;
+    left: 37px;
+    top: 43px;
     transform: translate(0, -50%) rotate(45.3deg);
-    width: 55.54px;
+    width: 57.5px;
     height: 8.65px;
     background: var(--color-dark-green);
 }
 
 .speedometer__speedometer-scale-4 {
-    top: 65px;
-    left: 376px;
+    top: -34px;
+    left: 359px;
 }
 
 .speedometer__speedometer-scale-4::before {
     content: '';
     position: absolute;
-    left: -40%;
-    top: -40px;
+    left: -8px;
+    top: 58px;
     transform: rotate(90deg);
-    width: 52px;
+    width: 57.5px;
     height: 8.65px;
     background: var(--color-dark-green);
 }
 
 .speedometer__speedometer-scale-5 {
-    top: 160px;
-    right: 165px;
+    top: 89px;
+    right: 61px;
 }
 
 .speedometer__speedometer-scale-5::before {
     content: '';
     position: absolute;
-    right: -53px;
-    top: -24px;
+    right: 47px;
+    top: 45px;
     transform: translate(0, -50%) rotate(-45.3deg);
     width: 55.54px;
     height: 8.65px;
@@ -237,14 +342,14 @@
 }
 
 .speedometer__speedometer-scale-6 {
-    bottom: 394px;
-    right: 70px;
+    bottom: 410px;
+    right: -58px;
 }
 
 .speedometer__speedometer-scale-6::before {
     content: '';
     position: absolute;
-    right: -65px;
+    right: 61px;
     top: 50%;
     transform: translate(0, -50%);
     width: 58px;
@@ -252,12 +357,17 @@
     background: var(--color-dark-green);
 }
 
+.speedometer__speedometer-scale-7 {
+    bottom: 137px;
+    right: 18px;
+}
+
 .speedometer__indicators {
     margin-left: 68.87px;
 }
 
 .speedometer__indicators-item {
-    margin-bottom: 80px;
+    margin-bottom: 56px;
 }
 
 .speedometer__indicators-item:last-child {
