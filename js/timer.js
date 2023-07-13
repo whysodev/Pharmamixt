@@ -5,40 +5,81 @@ const stop_minutes = document.getElementById('stop_minutes');
 const decon_hours = document.getElementById('decon_hours');
 const decon_minutes = document.getElementById('decon_minutes');
 
-function checkHoursUpArrow(table_hours) {
-    const table = document.querySelector(table_hours)
+function checkHoursUpArrow(table_hours, table_minutes) {
+    const hours = document.querySelector(table_hours);
+    const minutes = document.querySelector(table_minutes);
 
-    if (Number(table.innerHTML) < 9) {
-        table.innerHTML = `0${Number(table.innerHTML) + 1}`
-    } else if (Number(table.innerHTML) >= 9 && Number(table.innerHTML) <= 22) {
-        table.innerHTML = Number(table.innerHTML) + 1
+    if (Number(hours.innerHTML) === 23 && Number(minutes.innerHTML) === 59) {
+        hours.innerHTML = '00';
+        minutes.innerHTML = '00';
+    } else {
+        if (Number(hours.innerHTML) < 9) {
+            hours.innerHTML = `0${Number(hours.innerHTML) + 1}`
+        } else if (Number(hours.innerHTML) >= 9 && Number(hours.innerHTML) <= 22) {
+            hours.innerHTML = Number(hours.innerHTML) + 1
+        }
     }
 }
-function checkHoursDownArrow(table_hours) {
-    const table = document.querySelector(table_hours);
+function checkHoursDownArrow(table_hours, table_minutes) {
+    const hours = document.querySelector(table_hours);
+    const minutes = document.querySelector(table_minutes);
 
-    if (Number(table.innerHTML) !== 0 && Number(table.innerHTML) <= 10) {
-        table.innerHTML = `0${Number(table.innerHTML) - 1}`
-    } else if (Number(table.innerHTML) !== 0 && Number(table.innerHTML) >= 10) {
-        table.innerHTML = Number(table.innerHTML) - 1
+    if (Number(hours.innerHTML) === 0 && Number(minutes.innerHTML) === 0) {
+        hours.innerHTML = '23';
+        minutes.innerHTML = '59';
+    } else {
+        if (Number(hours.innerHTML) !== 0 && Number(hours.innerHTML) <= 10) {
+            hours.innerHTML = `0${Number(hours.innerHTML) - 1}`
+        } else if (Number(hours.innerHTML) !== 0 && Number(hours.innerHTML) >= 10) {
+            hours.innerHTML = Number(hours.innerHTML) - 1
+        }
     }
 }
-function checkMinutesUpArrow(table_minutes) {
-    const table = document.querySelector(table_minutes);
+function checkMinutesUpArrow(table_hours, table_minutes) {
+    const hours = document.querySelector(table_hours);
+    const minutes = document.querySelector(table_minutes);
 
-    if (Number(table.innerHTML) < 9) {
-        table.innerHTML = `0${Number(table.innerHTML) + 1}`
-    } else if (Number(table.innerHTML) >= 9 && Number(table.innerHTML) <= 59) {
-        table.innerHTML = Number(table.innerHTML) + 1
+
+    if (Number(hours.innerHTML) === 23 && Number(minutes.innerHTML) === 59) {
+        hours.innerHTML = '00';
+        minutes.innerHTML = '00';
+    } else if (Number(minutes.innerHTML) === 59) {
+        if (Number(hours.innerHTML) < 10) {
+            hours.innerHTML = `0${Number(hours.innerHTML) + 1}`
+            minutes.innerHTML = '00';
+        } else {
+            hours.innerHTML = `${Number(hours.innerHTML) + 1}`
+            minutes.innerHTML = '00';
+        }
+    } else {
+        if (Number(minutes.innerHTML) < 9) {
+            minutes.innerHTML = `0${Number(minutes.innerHTML) + 1}`
+        } else if (Number(minutes.innerHTML) >= 9 && Number(minutes.innerHTML) <= 59) {
+            minutes.innerHTML = Number(minutes.innerHTML) + 1
+        }
     }
 }
-function checkMinutesDownArrow(table_minutes) {
-    const table = document.querySelector(table_minutes);
+function checkMinutesDownArrow(table_hours, table_minutes) {
+    const hours = document.querySelector(table_hours);
+    const minutes = document.querySelector(table_minutes);
 
-    if (Number(table.innerHTML) !== 0 && Number(table.innerHTML) <= 10) {
-        table.innerHTML = `0${Number(table.innerHTML) - 1}`
-    } else if (Number(table.innerHTML) !== 0 && Number(table.innerHTML) >= 10) {
-        table.innerHTML = Number(table.innerHTML) - 1
+    if (Number(hours.innerHTML) === 0 && Number(minutes.innerHTML) === 0) {
+        hours.innerHTML = '23';
+        minutes.innerHTML = '59';
+    } else if (Number(minutes.innerHTML) === 0) {
+        if (Number(hours.innerHTML) < 10){
+            hours.innerHTML = `0${Number(hours.innerHTML) - 1}`
+            minutes.innerHTML = '59';
+        }else{
+            hours.innerHTML = `${Number(hours.innerHTML) - 1}`
+            minutes.innerHTML = '59';
+        }
+    } else {
+        if (Number(minutes.innerHTML) !== 0 && Number(minutes.innerHTML) <= 10) {
+            minutes.innerHTML = `0${Number(minutes.innerHTML) - 1}`
+        } else if (Number(minutes.innerHTML) !== 0 && Number(minutes.innerHTML) >= 10) {
+            minutes.innerHTML = Number(minutes.innerHTML) - 1
+        }
     }
 }
 
@@ -198,7 +239,7 @@ function initTables(table_hours, table_minutes) {
         }
     } else if (hoursInput.value.length == 1 || minutesInput.value.length == 1) {
         alert('Введите правильный формат времени')
-    }else{
+    } else {
         if (hoursInput.value < 24 && minutesInput.value < 60) {
             table_hours.innerHTML = hoursInput.value;
             table_minutes.innerHTML = minutesInput.value;
@@ -228,11 +269,11 @@ tables.forEach(table => {
 })
 
 calc_done.addEventListener('click', () => {
-    if (calc_done.id == 'startup'){
+    if (calc_done.id == 'startup') {
         initTables(startup_hours, startup_minutes)
-    }else if (calc_done.id == 'stop'){
+    } else if (calc_done.id == 'stop') {
         initTables(stop_hours, stop_minutes)
-    }else if (calc_done.id = 'decon'){
+    } else if (calc_done.id = 'decon') {
         initTables(decon_hours, decon_minutes)
     }
 });
