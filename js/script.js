@@ -89,8 +89,11 @@ function stopSpeedometer() {
     runner_number.innerHTML = 0;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
     if (play_button) {
+        progress.setAttribute('r', '350');
+        progress.setAttribute('cx', '380');
+        progress.setAttribute('cy', '380');
         let value;
 
         if (isRunning) {
