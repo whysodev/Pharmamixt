@@ -2,9 +2,21 @@ html,
 body {
     height: 100%;
     
-    transform: scale(.7);
+    transform: scale(.9);
     transform-origin: top;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
+
+
+/* .prevent-select {
+    -webkit-user-select: none; // Safari  
+    -ms-user-select: none; // IE 10 and IE 11 
+    user-select: none; // Standard syntax 
+  }
+*/
 
 body {
     font-family: 'Proto Mono', sans-serif;
