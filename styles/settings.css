@@ -123,7 +123,7 @@
 /* ===================== */
 /* Calculator */
 .calculator-wrapper {
-    z-index: 10;
+    z-index: 210; /* header z-index: 200 */
     width: 100%;
     position: absolute;
     right: 0;
