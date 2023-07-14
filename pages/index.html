@@ -3,124 +3,127 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pharmamixt</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="bg"><img src="../images/bg.svg" alt=""></div>
-        <header class="header">
-            <div class="header__container">
-                <button class="header__button">
-                    <div class="header__button-content">
-                        <span class="header__button-text">STANDBY</span>
-                        <span class="header__button-icon"><img src="../images/icons/stop-icon.svg" alt=""></span>
-                    </div>
-                </button>
-                <nav class="header__nav">
-                    <div class="header__nav-time"></div>
-                    <ul class="header__nav-list">
-                        <li class="header__nav-item"><span class="header__nav-icon"><img
-                                    src="../images/icons/search-icon.svg" alt=""></span></li>
-                        <li class="header__nav-item"><a href="../pages/settings.html" class="header__nav-icon"><img
-                                    src="../images/icons/settings-icon.svg" alt=""></a></li>
-                        <li class="header__nav-item"><a href="../pages/info.html" class="header__nav-icon"><img
-                                    src="../images/icons/info-icon.svg" alt=""></a></li>
-                        <li class="header__nav-item"><span class="header__nav-language">EN</span></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <main class="main">
-            <section class="speedometer">
-                <div class="speedometer__container">
-                    <div class="speedometer__thermometer">
-                        <p class="speedometer__thermometer-chemical">
-                            CO2
-                        </p>
-                        <div class="speedometer__thermometer-range">
-                            <span class="speedometer__thermometer-runner">
-                                <div class="speedometer__thermometer-number">0</div>
-                            </span>
-                            <div class="speedometer__thermometer-scale speedometer__thermometer-scale-5">2100+</div>
-                            <div class="speedometer__thermometer-scale speedometer__thermometer-scale-4">1600</div>
-                            <div class="speedometer__thermometer-scale speedometer__thermometer-scale-3">1000</div>
-                            <div class="speedometer__thermometer-scale speedometer__thermometer-scale-2">400</div>
-                            <div class="speedometer__thermometer-scale speedometer__thermometer-scale-1">0</div>
+    <div class="container">
+        <div class="wrapper">
+            <div class="bg"><img src="../images/bg.svg" alt=""></div>
+            <header class="header">
+                <div class="header__container">
+                    <button class="header__button">
+                        <div class="header__button-content">
+                            <span class="header__button-text">STANDBY</span>
+                            <span class="header__button-icon"><img src="../images/icons/stop-icon.svg" alt=""></span>
                         </div>
-                    </div>
-                    <div class="speedometer__spedometer">
-                        <div class="speedometer__speedometer-container">
-                            <img alt="" id="progress">
-                            <div class="speedometer__speedometer-progress">
-                                <svg width="749" height="747" class="speedometer__speedometer-progress-svg">
-                                    <defs>
-                                        <linearGradient id="gradient1">
-                                            <stop offset="0%" stop-color="#DF9300" />
-                                            <stop offset="100%" stop-color="#3CB14C" />
-                                        </linearGradient>
-                                    </defs>
-                                    <circle class="speedometer__speedometer-circle"></circle>
-                                </svg>
+                    </button>
+                    <nav class="header__nav">
+                        <div class="header__nav-time"></div>
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item"><span class="header__nav-icon"><img
+                                        src="../images/icons/search-icon.svg" alt=""></span></li>
+                            <li class="header__nav-item"><a href="#" class="header__nav-icon"><img
+                                        src="../images/icons/settings-icon.svg" alt=""></a></li>
+                            <li class="header__nav-item"><a href="../pages/info.html" class="header__nav-icon"><img
+                                        src="../images/icons/info-icon.svg" alt=""></a></li>
+                            <li class="header__nav-item"><span class="header__nav-language">EN</span></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <main class="main">
+                <section class="speedometer">
+                    <div class="speedometer__container">
+                        <div class="speedometer__thermometer">
+                            <p class="speedometer__thermometer-chemical">
+                                CO2
+                            </p>
+                            <div class="speedometer__thermometer-range">
+                                <span class="speedometer__thermometer-runner">
+                                    <div class="speedometer__thermometer-number">0</div>
+                                </span>
+                                <div class="speedometer__thermometer-scale speedometer__thermometer-scale-5">2100+</div>
+                                <div class="speedometer__thermometer-scale speedometer__thermometer-scale-4">1600</div>
+                                <div class="speedometer__thermometer-scale speedometer__thermometer-scale-3">1000</div>
+                                <div class="speedometer__thermometer-scale speedometer__thermometer-scale-2">400</div>
+                                <div class="speedometer__thermometer-scale speedometer__thermometer-scale-1">0</div>
                             </div>
-                            <div class="speedometer__speedometer-cursor-wrapper">
-                                <div class="speedometer__speedometer-cursor">
-                                    <div class="speedometer__speedometer-line"></div>
-                                    <div class="speedometer__speedometer-line speedometer__speedometer-line--white">
+                        </div>
+                        <div class="speedometer__spedometer">
+                            <div class="speedometer__speedometer-container">
+                                <img alt="" id="progress">
+                                <div class="speedometer__speedometer-progress">
+                                    <svg width="749" height="747" class="speedometer__speedometer-progress-svg">
+                                        <defs>
+                                            <linearGradient id="gradient1">
+                                                <stop offset="0%" stop-color="#DF9300" />
+                                                <stop offset="100%" stop-color="#3CB14C" />
+                                            </linearGradient>
+                                        </defs>
+                                        <circle class="speedometer__speedometer-circle"></circle>
+                                    </svg>
+                                </div>
+                                <div class="speedometer__speedometer-cursor-wrapper">
+                                    <div class="speedometer__speedometer-cursor">
+                                        <div class="speedometer__speedometer-line"></div>
+                                        <div class="speedometer__speedometer-line speedometer__speedometer-line--white">
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="speedometer__speedometer-info">
+                                    <p class="speedometer__speedometer-time">1:16 MIN</p>
+                                    <p class="speedometer__speedometer-result"></p>
+                                    <p class="speedometer__speedometer-chemical">AIR CHANGE RATE <span>M3/H</span></p>
+                                </div>
+                                <button class="speedometer__speedometer-play">
+                                    <img src="../images/icons/treangle-icon.svg" alt="">
+                                </button>
+                                <div class="speedometer__speedometer-scale speedometer__speedometer-scale-1">0</div>
+                                <div class="speedometer__speedometer-scale speedometer__speedometer-scale-2">250</div>
+                                <div class="speedometer__speedometer-scale speedometer__speedometer-scale-3">500</div>
+                                <div class="speedometer__speedometer-scale speedometer__speedometer-scale-4">750</div>
+                                <div class="speedometer__speedometer-scale speedometer__speedometer-scale-5">1000</div>
+                                <div class="speedometer__speedometer-scale speedometer__speedometer-scale-6">1250</div>
+                                <div class="speedometer__speedometer-scale speedometer__speedometer-scale-7">1500</div>
                             </div>
-                            <div class="speedometer__speedometer-info">
-                                <p class="speedometer__speedometer-time">1:16 MIN</p>
-                                <p class="speedometer__speedometer-result"></p>
-                                <p class="speedometer__speedometer-chemical">AIR CHANGE RATE <span>M3/H</span></p>
+                        </div>
+                        <div class="speedometer__indicators">
+                            <div class="speedometer__indicators-item">
+                                <p class="speedometer__indicators-number">
+                                    80%
+                                </p>
+                                <p class="speedometer__indicators-name">
+                                    Humidity
+                                </p>
                             </div>
-                            <button class="speedometer__speedometer-play">
-                                <img src="../images/icons/treangle-icon.svg" alt="">
-                            </button>
-                            <div class="speedometer__speedometer-scale speedometer__speedometer-scale-1">0</div>
-                            <div class="speedometer__speedometer-scale speedometer__speedometer-scale-2">250</div>
-                            <div class="speedometer__speedometer-scale speedometer__speedometer-scale-3">500</div>
-                            <div class="speedometer__speedometer-scale speedometer__speedometer-scale-4">750</div>
-                            <div class="speedometer__speedometer-scale speedometer__speedometer-scale-5">1000</div>
-                            <div class="speedometer__speedometer-scale speedometer__speedometer-scale-6">1250</div>
-                            <div class="speedometer__speedometer-scale speedometer__speedometer-scale-7">1500</div>
+                            <div class="speedometer__indicators-item">
+                                <p class="speedometer__indicators-number">1244</p>
+                                <div class="speedometer__indicators-name">PM 1.0</div>
+                            </div>
+                            <div class="speedometer__indicators-item">
+                                <p class="speedometer__indicators-number">467</p>
+                                <div class="speedometer__indicators-name">PM 2.5</div>
+                            </div>
+                            <div class="speedometer__indicators-item">
+                                <p class="speedometer__indicators-number">556</p>
+                                <div class="speedometer__indicators-name">PM 10</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="speedometer__indicators">
-                        <div class="speedometer__indicators-item">
-                            <p class="speedometer__indicators-number">
-                                80%
-                            </p>
-                            <p class="speedometer__indicators-name">
-                                Humidity
-                            </p>
-                        </div>
-                        <div class="speedometer__indicators-item">
-                            <p class="speedometer__indicators-number">1244</p>
-                            <div class="speedometer__indicators-name">PM 1.0</div>
-                        </div>
-                        <div class="speedometer__indicators-item">
-                            <p class="speedometer__indicators-number">467</p>
-                            <div class="speedometer__indicators-name">PM 2.5</div>
-                        </div>
-                        <div class="speedometer__indicators-item">
-                            <p class="speedometer__indicators-number">556</p>
-                            <div class="speedometer__indicators-name">PM 10</div>
-                        </div>
-                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="footer__container">
+                    <a href="./manual.html"><button class="footer__button">Manual</button></a>
+                    <a href="./settings.html"><button class="footer__button footer__button--green">Automatic</button></a>
                 </div>
-            </section>
-        </main>
-        <footer class="footer">
-            <div class="footer__container">
-                <a href="./manual.html"><button class="footer__button">Manual</button></a>
-                <button class="footer__button footer__button--green">Automatic</button>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </div>
+    
 
     <script src="../node_modules/moment/moment.js"></script>
     <script src="../js/header.js"></script>

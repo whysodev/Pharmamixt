@@ -11,6 +11,10 @@
 @import 'global.css';
 @import 'header.css';
 
+.container{
+    height: 1024px;
+}
+
 .wrapper {
     position: relative;
 }

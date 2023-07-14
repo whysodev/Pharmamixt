@@ -4,6 +4,8 @@ const status_button = document.querySelector('.header__button-text');
 const status_icon = document.querySelector('.header__button-icon img');
 let isRunning = Boolean(localStorage.getItem('status')) || false;
 
+console.log(window.innerHeight);
+
 if (localStorage.getItem('status')) {
     if (localStorage.getItem('status') === 'true') {
         isRunning = true

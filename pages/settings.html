@@ -10,6 +10,37 @@
 
 <body>
     <div class="wrapper">
+        <div class="calculator-wrapper">
+            <div class="calculator">
+                <div class="calculator__table">
+                    <input type="number" placeholder="00" class="calculator__table-time" id="calculator_time-hours"
+                        oninput="checkInputLength(this)">
+                    <div class="calculator__table-devider">:</div>
+                    <input type="number" placeholder="00" class="calculator__table-time" id="calculator_time-minutes"
+                        oninput="checkInputLength(this)">
+                </div>
+                <div class="calculator__keyboard">
+                    <p class="calculator__keyboard-key" onclick="addNumber(1)">1</p>
+                    <p class="calculator__keyboard-key" onclick="addNumber(2)">2</p>
+                    <p class="calculator__keyboard-key" onclick="addNumber(3)">3</p>
+                    <p class="calculator__keyboard-key" onclick="addNumber(4)">4</p>
+                    <p class="calculator__keyboard-key" onclick="addNumber(5)">5</p>
+                    <p class="calculator__keyboard-key" onclick="addNumber(6)">6</p>
+                    <p class="calculator__keyboard-key" onclick="addNumber(7)">7</p>
+                    <p class="calculator__keyboard-key" onclick="addNumber(8)">8</p>
+                    <p class="calculator__keyboard-key" onclick="addNumber(9)">9</p>
+                    <p class="calculator__keyboard-key-invisible">0</p>
+                    <p class="calculator__keyboard-key" onclick="addNumber(0)">0</p>
+                    <p class="calculator__keyboard-key" onclick="backspace()" id="backbutton"><img
+                            src="../images/icons/left-arrow-icon.svg" alt=""></p>
+                </div>
+                <button class="calculator__button" id="calc_done">DONE</button>
+                <div class="calculator__cross">
+                    <div class="calculator__cross-line"></div>
+                    <div class="calculator__cross-line"></div>
+                </div>
+            </div>
+        </div>
         <header class="header">
             <div class="header__container">
                 <button class="header__button">
@@ -115,7 +146,7 @@
                                         <span class="settings__setting-up" id="decon-minutes_up-arrow" onclick="checkMinutesUpArrow('#decon_hours', '#decon_minutes')"><img
                                                 src="../images/icons/arrow-up-icon.svg" alt=""></span>
                                         <p class="settings__setting-table" id="decon_minutes">00</p>
-                                        <span class="settings__setting-down" id="decon-minutes_down-arrow" onclick="checkMinutesDownArrow('#decon_minutes')"><img
+                                        <span class="settings__setting-down" id="decon-minutes_down-arrow" onclick="checkMinutesDownArrow('#decon_hours', '#decon_minutes')"><img
                                                 src="../images/icons/arrow-down-icon.svg" alt=""></span>
                                     </div>
                                 </div>
@@ -135,37 +166,7 @@
         </footer>
     </div>
 
-    <div class="calculator-wrapper">
-        <div class="calculator">
-            <div class="calculator__table">
-                <input type="number" placeholder="00" class="calculator__table-time" id="calculator_time-hours"
-                    oninput="checkInputLength(this)">
-                <div class="calculator__table-devider">:</div>
-                <input type="number" placeholder="00" class="calculator__table-time" id="calculator_time-minutes"
-                    oninput="checkInputLength(this)">
-            </div>
-            <div class="calculator__keyboard">
-                <p class="calculator__keyboard-key" onclick="addNumber(1)">1</p>
-                <p class="calculator__keyboard-key" onclick="addNumber(2)">2</p>
-                <p class="calculator__keyboard-key" onclick="addNumber(3)">3</p>
-                <p class="calculator__keyboard-key" onclick="addNumber(4)">4</p>
-                <p class="calculator__keyboard-key" onclick="addNumber(5)">5</p>
-                <p class="calculator__keyboard-key" onclick="addNumber(6)">6</p>
-                <p class="calculator__keyboard-key" onclick="addNumber(7)">7</p>
-                <p class="calculator__keyboard-key" onclick="addNumber(8)">8</p>
-                <p class="calculator__keyboard-key" onclick="addNumber(9)">9</p>
-                <p class="calculator__keyboard-key-invisible">0</p>
-                <p class="calculator__keyboard-key" onclick="addNumber(0)">0</p>
-                <p class="calculator__keyboard-key" onclick="backspace()" id="backbutton"><img
-                        src="../images/icons/left-arrow-icon.svg" alt=""></p>
-            </div>
-            <button class="calculator__button" id="calc_done">DONE</button>
-            <div class="calculator__cross">
-                <div class="calculator__cross-line"></div>
-                <div class="calculator__cross-line"></div>
-            </div>
-        </div>
-    </div>
+
 
     <script src="../node_modules/moment/moment.js"></script>
     <script src="../js/header.js"></script>

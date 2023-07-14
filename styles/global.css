@@ -1,6 +1,9 @@
 html,
 body {
     height: 100%;
+    
+    transform: scale(.7);
+    transform-origin: top;
 }
 
 body {
@@ -21,7 +24,6 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    overflow: hidden;
     width: 1366px;
     height: 1024px;
 }

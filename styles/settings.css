@@ -123,19 +123,19 @@
 /* ===================== */
 /* Calculator */
 .calculator-wrapper {
+    z-index: 10;
     width: 100%;
     position: absolute;
-    left: -100%;
     right: 0;
     top: 0;
     bottom: 0;
     background: rgba(23, 23, 23, .5);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
 .calculator-wrapper.active{
-    left: 0;
+    display: flex;
 }
 
 .calculator {
